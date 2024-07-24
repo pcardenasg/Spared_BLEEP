@@ -1,0 +1,8 @@
+__pycache__/
+lightning_logs/
+spared
+wandb/
+processed_data
+PublicDatabase
+imput_results/
+Results_BLEEP
