@@ -31,17 +31,17 @@ str2h_list = lambda x: [str2intlist(i) for i in x.split('//')[1:]]
 def get_main_parser():
     parser = argparse.ArgumentParser(description='Code for expression prediction using contrastive learning implementation.')
     # Parameters #############################################################################################################################################################################
-    -- parser.add_argument('--dataset',                    type=str,           default='10xgenomic_human_brain',   help='Dataset to use.')
-    -- parser.add_argument('--prediction_layer',           type=str,           default='c_d_log1p',                help='The prediction layer from the dataset to use.')
-    -- parser.add_argument('--noisy_training',             type=str2bool,      default=False,                      help='Whether or not to use noisy gene expression for training.')
-    -- parser.add_argument('--max_steps',                  type=int,           default=1000,                       help='Number of steps to train de model.')
-    -- parser.add_argument('--val_check_interval',         type=int,           default=10,                         help='Number of steps to do valid checks.')
-    -- parser.add_argument('--batch_size',                 type=int,           default=256,                        help='The batch size to train model.')
-    -- parser.add_argument('--shuffle',                    type=str2bool,      default=True,                       help='Whether or not to shuffle the data in dataloaders.')
-    -- parser.add_argument('--lr',                         type=float,         default=1e-2,                       help='Learning rate to use.')
-    -- parser.add_argument('--optimizer',                  type=str,           default='Adam',                     help='Optimizer to use in training. Options available at: https://pytorch.org/docs/stable/optim.html It will just modify main optimizers and not sota (they have fixed optimizers).')
-    -- parser.add_argument('--momentum',                   type=float,         default=0.9,                        help='Momentum to use in the optimizer if it receives this parameter. If not, it is not used. It will just modify main optimizers and not sota (they have fixed optimizers).')
-    -- parser.add_argument('--exp_name',                   type=str,           default='None',                     help='Name of the experiment to save in the results folder. "None" will assign a date coded name.')
+    parser.add_argument('--dataset',                    type=str,           default='10xgenomic_human_brain',   help='Dataset to use.')
+    parser.add_argument('--prediction_layer',           type=str,           default='c_d_log1p',                help='The prediction layer from the dataset to use.')
+    parser.add_argument('--noisy_training',             type=str2bool,      default=False,                      help='Whether or not to use noisy gene expression for training.')
+    parser.add_argument('--max_steps',                  type=int,           default=1000,                       help='Number of steps to train de model.')
+    parser.add_argument('--val_check_interval',         type=int,           default=10,                         help='Number of steps to do valid checks.')
+    parser.add_argument('--batch_size',                 type=int,           default=256,                        help='The batch size to train model.')
+    parser.add_argument('--shuffle',                    type=str2bool,      default=True,                       help='Whether or not to shuffle the data in dataloaders.')
+    parser.add_argument('--lr',                         type=float,         default=1e-2,                       help='Learning rate to use.')
+    parser.add_argument('--optimizer',                  type=str,           default='Adam',                     help='Optimizer to use in training. Options available at: https://pytorch.org/docs/stable/optim.html It will just modify main optimizers and not sota (they have fixed optimizers).')
+    parser.add_argument('--momentum',                   type=float,         default=0.9,                        help='Momentum to use in the optimizer if it receives this parameter. If not, it is not used. It will just modify main optimizers and not sota (they have fixed optimizers).')
+    parser.add_argument('--exp_name',                   type=str,           default='None',                     help='Name of the experiment to save in the results folder. "None" will assign a date coded name.')
     ##########################################################################################################################################################################################
 
     return parser
